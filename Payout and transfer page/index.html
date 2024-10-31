@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payout And Transfer page</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./mediaPay.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Millik:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/module/css/sans-serif">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+           <a href="../index.html" class="logo">
+               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1013.12 241.26"><rect fill="#2a3362" x="328.78" y="82.1" width="16.11" height="82.89"></rect> <path fill="#2a3362" d="M407.24,135.58c0,11.44-7.36,16.58-17.16,16.58s-16.35-5.14-16.35-16V106.62H357.62V139.9c0,16.57,10.39,26.26,27.67,26.26,10.86,0,16.93-4,21-8.52h.94l1.4,7.36h14.82V106.62H407.24Z"></path> <path fill="#2a3362" d="M565.27,153.44c-11.79,0-18.44-5.37-19.49-13.19h51.13a33.78,33.78,0,0,0,.35-4.91c-.11-21-16-29.89-33-29.89-19.73,0-34.56,11.8-34.56,30.83,0,18.09,14.25,29.88,35.61,29.88,17.87,0,29.77-7.93,32.23-20.08H581.62C579.63,150.87,573.91,153.44,565.27,153.44Zm-1-35.26c10.28,0,16.23,4.55,17.17,11H546.13C547.64,123,553.6,118.18,564.22,118.18Z"></path> <path fill="#2a3362" d="M624.63,115h-1l-1.52-8.41H607.47V165h16.11V139.9c0-11.33,6.53-17.63,18.68-17.63a32.5,32.5,0,0,1,6.58.58V106.62h-2.25C635.85,106.62,629.18,108.84,624.63,115Z"></path> <polygon fill="#2a3362" points="727.94 146.78 727.01 146.78 713.23 110.24 696.65 110.24 683.11 146.67 682.06 146.67 669.22 106.62 653.22 106.62 672.95 165 690.47 165 704.48 127.75 705.41 127.75 719.19 165 736.82 165 756.55 106.62 740.55 106.62 727.94 146.78"></polygon> <path fill="#2a3362" d="M820.67,148V128.46c0-15.88-13.43-23-30.13-23-17.74,0-28.83,8.41-30.35,21H776.3c1.17-5.49,5.84-8.52,14.24-8.52s14,3.15,14,9.57V129l-26.27,2c-12.14.94-21,6.31-21,17.75,0,11.79,10.16,17.39,25.1,17.39,12.06,0,19.41-3.36,23.91-8.43h.8c2.53,5.7,7.66,7.27,13.24,7.27h6.77V153.09h-1.52C822.18,153.09,820.67,151.46,820.67,148Zm-16.12-6.19c0,9.23-11,12.26-20.43,12.26-6.42,0-10.62-1.63-10.62-6.07,0-4,3.62-5.95,9-6.42l22.06-1.63Z"></path> <polygon fill="#2a3362" points="880.23 106.62 861.43 148.89 860.38 148.89 841.35 106.62 823.95 106.62 851.15 165 870.42 165 897.5 106.62 880.23 106.62"></polygon> <path fill="#2a3362" d="M949,146.08c-2,4.79-7.71,7.36-16.35,7.36-11.79,0-18.44-5.37-19.49-13.19h51.13a33.78,33.78,0,0,0,.35-4.91c-.11-21-16-29.89-33-29.89-19.73,0-34.55,11.8-34.55,30.83,0,18.09,14.24,29.88,35.6,29.88,17.87,0,29.77-7.93,32.23-20.08Zm-17.4-27.9c10.28,0,16.23,4.55,17.17,11H913.47C915,123,920.94,118.18,931.56,118.18Z"></path> <path fill="#2a3362" d="M302.6,102.32c0-5.14,3.62-7.35,8.29-7.35a24.17,24.17,0,0,1,6.42.93L320,84.22a36.71,36.71,0,0,0-12.14-2.1c-11.91,0-21.48,6.31-21.48,19.38v5.12h-13.9v12.79h13.9V165H302.6v-45.6h18.16V106.62H302.6Z"></path> <path fill="#2a3362" d="M459,90.16H444l-.84,16.46H430.48v12.79h12.38v28.78c0,9.8,5,18,20,18a52.84,52.84,0,0,0,11.56-1.28V152.62a34.29,34.29,0,0,1-6.66.82c-8.05,0-8.75-4.55-8.75-8.06v-26h16V106.62H459Z"></path> <path fill="#2a3362" d="M509.59,90.16H494.64l-.84,16.46H481.09v12.79h12.38v28.78c0,9.8,5,18,20,18A52.84,52.84,0,0,0,525,164.88V152.62a34.29,34.29,0,0,1-6.66.82c-8.05,0-8.75-4.55-8.75-8.06v-26h16.05V106.62H509.59Z"></path> <path fill="#009a46" d="M48.23,79.89c0-9.37,2.74-17.37,8.49-23.12l10,10C55.59,77.86,65.31,112.34,97,144.06s66.19,41.43,77.31,30.32l10,10c-18.76,18.76-61.49,5.45-97.26-30.33C62.24,129.23,48.23,101.07,48.23,79.89Z"></path> <path fill="#ff5805" d="M111.29,193c-9.37,0-17.37-2.74-23.13-8.49l10-10c11.11,11.11,45.59,1.39,77.31-30.32S216.89,78,205.78,66.89l10-10c18.77,18.76,5.45,61.49-30.33,97.26C160.63,179,132.47,193,111.29,193Z"></path> <path fill="#f5afcb" d="M188.76,139.84c-6.07-17.48-18.47-36.16-34.92-52.6-35.77-35.78-78.5-49.1-97.26-30.33h0c-1.33,1.34-.18,4.65,2.58,7.41s6.07,3.9,7.4,2.57c11.12-11.11,45.6-1.39,77.31,30.33,15,15,26.18,31.75,31.57,47.25,4.72,13.59,4.26,24.55-1.24,30.05h0c-1.34,1.33-.18,4.65,2.57,7.4s6.07,3.91,7.41,2.57C193.79,174.88,195.42,159,188.76,139.84Z"></path> <path fill="#ff9b00" d="M215.76,56.91c-9.63-9.63-25.49-11.26-44.67-4.59-17.47,6.06-36.16,18.47-52.6,34.91C82.72,123,69.4,165.73,88.16,184.5h0c1.34,1.33,4.65.18,7.41-2.57s3.91-6.07,2.57-7.41C87,163.41,96.75,128.93,128.47,97.21c15-15,31.75-26.18,47.25-31.57,13.59-4.71,24.55-4.26,30.06,1.24h0c1.33,1.33,4.65.18,7.4-2.58S217.09,58.24,215.76,56.91Z"></path></svg>
+            </a>
+            <a href="" class="toggle-button">
+             <span class="bar"></span>
+             <span class="bar"></span>
+            
+            </a>
+            <ul>
+             <li class="dropdown-1"><a href="" class="menu">Enterprise</a>
+               <ul class="dropmenu-1">
+                 <div class="container-box">
+                   <div class="first-box">
+                     <ul>
+                       <li><a href="" class="pay">Payment Solution</a></li>
+                       <li><a href="" class="pay">Grow your business</a></li>
+                     </ul>
+                   </div>
+                   <div class="pay-items">
+                  <ul class="pay-items2">
+               <div class="accept-online " style="display: flex; align-items:center; gap: 10px;">
+                 <img src="../images/accept-onlibe.svg" style="margin-top: -70px;"  width="30px" height="30px"   alt="">
+                 <div class="accept-online-1" >
+              <a href="../Payout and transfer page/index.html" class="payy">Accept online payment</a>
+              <p class="drop-paragraph">
+               Easily receive online payments from around the world in different currencies.
+              </p>
+                 </div>
+               </div>
+               <div class="payouts" style="display: flex; align-items:center; gap: 10px;">
+                 <img src="../images/payout and tra.svg"  style="margin-top: -70px;"  width="30px" height="30px"   alt="" alt="">
+                <div class="payouts1">
+                 <a href="" class="payy">Payouts and transfer</a>
+              <p class="drop-paragraph">Experience effortless cross-border payouts and transfers in various currencies worldwide.</p>
+                </div>
+               </div>
+               <div class="swap" style="display: flex; align-items:center; gap: 10px;">
+                 <img src="../images/swap.svg" alt="" style="margin-top: -56px;"  width="30px" height="30px"   alt="">
+                 <div class="swap1">
+                   <a href=""class="payy">Swap</a>
+                   <p class="drop-paragraph">
+                     
+                   Swap your Naira for Dollars, Euros and Pounds
+                 
+                   </p>
+                 </div>
+               </div>
+               <div class="pos-system" style="display: flex;align-items:center; gap: 10px;">
+                 <img src="../images/pos.svg" alt="" style="margin-top: -70px;"  width="30px" height="30px"  alt="">
+                 <div class="pos1">
+                   <a href="" class="payy">POS Systems</a>
+                   <p class="drop-paragraph">Point of Sale devices with multiple payment methods to grow your physical business.</p>
+                 </div>
+               </div>
+               <div class="checkout" style="display: flex;align-items:center; gap: 10px;">
+                 <img src="../images/checkout.svg" alt="" style="width: 30px;height: 30px; margin-top: -30px;"  alt="">
+              
+               <div class="checkout1">
+                 <a href="../Checkout Page/index.html" class="payy">Checkout</a>
+          <p class="drop-paragraph">Experience checkout yourself</p>
+               </div>
+         </div>
+                 </ul>
+                   </div>
+                 </div>
+                 
+               </ul>
+             </li>
+
+
+             <li class="drop-down"><a href="" class="menu">SME</a>
+
+
+              <ul class="drop-menu">
+                <div class="dropbox">
+                 <div class="drop-box1">
+              <ul>
+               <li><a href="" class="box1">Sell to anyone</a></li>
+               <li><a href="" class="box1">Grow your business</a></li>
+              </ul>
+                 </div>
+                 <div class="drop-box2" style="padding: 20px 20px; width: 600px;">
+                   <div class="checkout" style="display: flex;align-items:center; gap: 10px;">
+                     <img src="../images/checkout.svg" alt="" style="width: 30px;height: 30px; margin-top: -90px;"  alt="">
+                  
+                   <div class="checkout1">
+                     <a href="../Online-checkoutPage/index.html" class="pays"> Online Checkout</a>
+              <p class="drop-paragraph">
+               Add our checkout to your Shopify, WordPress, WooCommerce, Joomla and PrestaShop stores.
+             </p>
+                   </div>
+             </div>
+             <div class="payment-links" style="display: flex;align-items:center; gap: 10px;">
+               <img src="../images/paymentlinks.svg" alt="" style="width: 30px;height: 30px; margin-top: -50px;" >
+               <div class="payment-links1">
+                 <a href="" class="pays"> Payment Links</a>
+              <p class="drop-paragraph">
+               Accept payments without writing code.
+             </p>
+               </div>
+             </div>
+             <div class="pos-system" style="display: flex;align-items:center; gap: 10px;">
+               <img src="../images/pos.svg" alt="" style="margin-top: -70px;"  width="30px" height="30px"  alt="">
+               <div class="pos1">
+                 <a href="" class="pays">POS Systems</a>
+                 <p class="drop-paragraph">Point of Sale devices with multiple payment methods to grow your physical business.</p>
+               </div>
+             </div>
+             <div class="buildOnline" style="display: flex;align-items:center; gap: 10px;">
+               <img src="../images/buildd.svg" style="width: 30px;height: 30px; margin-top: -75px;"  alt="">
+               <div class="buildone-1">
+                 <a href="" class="pays">Build your online store</a>
+                 <p class="drop-paragraph">
+                   Create a free online store that helps you find customers, and accept payments globally.
+                 </p>
+               </div>
+             </div>
+   
+                 </div>
+                 <div class="drop-box3" style="padding: 20px 20px;width: 600px;">
+                   <div class="swap" style="display: flex; align-items:center; gap: 10px;">
+                     <img src="../images/swap.svg" alt=""   style="width: 30px;height: 30px; margin-top: -50px;" >
+                     <div class="swap1">
+                       <a href=""class="pays">Swap</a>
+                       <p class="drop-paragraph">
+                       Swap your Naira for Dollars, Euros and Pounds
+                       </p>
+                     </div>
+                   </div>
+                   <div class="invoicess"  style="display: flex; align-items:center; gap: 10px;">
+                     <img src="../images/invoice.svg" alt="" style="width: 30px;height: 30px; margin-top: -50px;" >
+                     <div class="invoice1">
+                       <a href=""class="pays">Invoice</a>
+                       <p class="drop-paragraph">             
+                         Create and issue professional invoices for global payments.
+                       </p>
+                     </div>
+                   </div>
+                   <div class="disha" style="display: flex; align-items:center; gap: 10px;">
+                     <img src="../images/disha.svg" alt="" style="width: 30px;height: 30px; margin-top: -80px;">
+                     <div class="disha1">
+                       <a href=""class="pays">Disha for creators</a>
+                       <p class="drop-paragraph">                   
+                         Effortlessly create a free single-page website, sell products globally, no coding required.                     
+                       </p>
+                     </div>
+                   </div>
+                   <div class="afriticket" style="display: flex; align-items:center; gap: 10px;">
+                     <img src="../images/afriticket.svg" alt="" style="width: 30px;height: 30px; margin-top: -90px;">
+                     <div class="ticket1">
+                       <a href=""class="pays">Afritickets</a>
+                       <p class="drop-paragraph">
+                      
+                         Experience the integrated offering of lifestyle, business, event, and travel management services.
+                         
+                       </p>
+                     </div>
+                   </div>
+                 </div>
+                </div>
+                </ul>
+             </li>
+
+
+
+
+
+
+
+
+
+             <li class="dropdown-2"><a href="" class="menu">Personal</a>  
+             <ul class="dropmenu-2">
+               <div class="send-app " style="display: flex; align-items:center; gap:  15px;">
+                <img src="../images/send app.svg" alt="" width="40px" height="40px"  style="margin-top: -40px;">
+                <div class="Send-app" style="padding-top: 20px;">
+                 <a href="" class="sonal">Send App</a>
+                 <p class="drop-paragraph">
+                   Safely, quickly and conveniently send money to the people who matter most to you.
+                 </p>
+                </div>
+                 </div>
+                 
+                  
+                 
+       
+              
+               <div class="market" style="display: flex; gap: 15px; align-items:center;">
+                <img src="../images/market.svg" style="margin-top: -40px;" >
+                <div class="market1" style="padding-top: 20px;">
+                 <a href=""class="sonal"> Market</a>
+                 <p class="drop-paragraph">
+                   Discover, shop and get your items delivered to you from your favourite online businesses.
+                 </p>
+                </div>
+               </div>
+               <div class="Swap"  style="display: flex; gap: 15px; align-items:center;">
+                 <img src="../images/swap.svg" alt="" style="margin-top: 5px;">
+                 <div class="swap1" style="padding-top: 20px;">
+                   <a href=""class="sonal">Swap</a>
+                   <p class="drop-paragraph">
+                     
+                   Swap your Naira for Dollars, Euros and Pounds
+                 
+                   </p>
+                 </div>
+               </div>
+               <div class="BuyEvent"  style="display: flex; gap: 15px;align-items:center;">
+                <img src="../images/buy event.svg" alt="">
+               <div class="event1" style="padding-top: 20px;">
+                 <a href=""class="sonal">Buy Ticket Event</a>
+                 <p class="drop-paragraph">
+                   Conveniently find events you love and buy your tickets.
+                 </p>
+               </div>
+                
+               </div>
+               <div class="Tuition"  style="display: flex; gap: 15px; align-items:center;">
+                 <img src="../images/tuition.svg" alt="">
+                 <div class="tuition1" style="padding-top: 20px;">
+                   <a href=""class="sonal">Tuition</a>
+                   <p class="drop-paragraph">
+                     Quick and easy tuition fee payments to African and international schools.
+                   </p>
+                 </div>
+               </div>
+             </ul>
+             
+             </li>
+
+
+
+
+             <li class="dropdown-3"><a href="" class="menu">Resources</a>
+               <ul class="dropmenu-3">
+                   <li><a href="" class="resource">Pricing</a></li>
+                   <li><a href="" class="resource">Blog</a></li>
+                   <li><a href="" class="resource">Customer Care</a></li>
+                   <li><a href="" class="resource">Integrations</a></li>
+               </ul>
+
+             </li>
+             <li class="dropdown-4">
+               <a href="" class="menu">Developer</a>
+             <ul class="dropmenu-4">
+               <li><a href="" class="developer">API Documentation</a></li>
+               <li><a href=""  class="developer">API Documentation</a></li>
+               <li><a href=""  class="developer">API Documentation</a></li>
+             </ul>
+             
+             
+             </li>
+             <li class="dropdown-5"><a href="" class="menu">Company</a>
+               <ul class="dropmenu-5">
+                 <li><a href="" class="company">Careers</a></li>
+               <li><a href=""  class="company">Peers</a></li>
+               </ul>
+             </li>
+         </ul>
+
+         <button  class="btn1" >
+            <a href="../signIn page/index.html">Sign In</a> 
+         </button>
+          
+        </nav>
+   </header>
+
+
+   <!-- body -->
+<div class="body1">
+    <div class="body-text">
+    
+    <h1 class="body-header">
+       <span style="color: #6672c7;;">Send Money</span>  to <br> Anyone or Business <br> <span style="color: #6672c7;"> Globally</span>
+    </h1>
+    <p class="body-paragraph">Process payouts globally in 30+ currencies with Flutterwave's APIs and software solutions.</p>
+    <div class="body-list">
+        <ul class="body-sublist">
+        <li>Pay your vendors and contractors</li>
+        <li>Set-up your payroll and leave the rest to us</li>
+        <li>Send money to 40+ countries</li>
+        </ul>
+      </div>
+        <div class="btn-box">
+            <button class="btn-1">Get Started</button>
+            <button class="btn-2">Contact Sales</button>
+        </div>
+    </div>
+    <div class="image1">
+      <img src="../images/flow image.webp" alt="">
+    </div>
+</div>
+
+
+
+
+<!-- Logo section -->
+<div class="logo-section">
+     <div class="logo-image">
+      <img src="../images/uber.svg" alt="">
+      <img src="../images/mtn.svg" alt="">
+      <img src="../images/chipper.svg" alt="">
+      <img src="../images/piggyvest.svg" alt="">
+      <img src="../images/wise.svg" alt="">
+      <img src="../images/microsoft.svg" alt="">
+     </div>
+</div>
+
+<!-- build-section -->
+<section class="build">
+  <div class="build-text">
+    <h1 class="build-header">
+      Built for and loved <br> by <span style="color: #6672c7;">developers</span>
+    </h1>
+    <p class="build-paragraph">
+      Easily build payment flows for any use case — from online <br> collections to payouts and everything in between — by <br>integrating our SDKs and API endpoints.
+    </p> 
+    <div class="build-list">
+      <ul class="build-sublist">
+      <li>One time transfers</li>
+      <li>Recurring transfers</li>
+      <li>Payment verification</li>
+      <li>Bulk transfers</li>
+      <li>Hands-on support</li>
+      
+      </ul>
+    </div>
+    <button class="build-button">
+      Read API Docs
+    </button>
+    </div>
+</section>
+
+
+
+<!-- Safety section -->
+<section class="safety">
+  <div class="safety-text">
+  <h1 class="safety-header">
+   <span style="color: #6672c7;"> Safety</span> and <span style="color: #6672c7;"> security</span> <br> guaranteed
+  </h1>
+  <p class="safety-paragraph">
+    At Flutterwave, we take security seriously, so every payment made on our platform is 100% secure, even 
+    exceeding industry standards.
+  </p>
+  <div class="safety-flex">
+    <div class="flex1">
+      <h2 class="flex-text1">
+        ISO 27001 & 22301 Certification
+      </h2>
+      <p class="flex-paragraph1">
+        Our ISO 27001 & 22301 certification means that we  have acceptable business practices and processes, including a robust business continuity plan.
+      </p>
+    </div>
+    <div class="flex2">
+      <h2 class="flex-text2">
+        PA DSS & PCI DSS Compliant
+      </h2>
+      <p class="flex-paragraph2">
+        This certification is proof that Flutterwave as a payment gateway processor, has satisfied the highest level of Security Audit and authorizations.
+      </p>
+    </div>
+  </div>
+  </div>
+</section>
+<section class="Roll" style="margin-top: 90px;">
+   <figure class="figure"><svg viewBox="0 0 1440 639" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_3310_4825)"><path d="M1456.31 130.285C1471.37 125.154 1474.98 95.7823 1464.38 64.6813C1453.78 33.5803 1432.98 12.5275 1417.92 17.6586C1402.87 22.7898 1399.25 52.1617 1409.86 83.2627C1420.46 114.364 1441.26 135.417 1456.31 130.285Z" fill="#FF5805"></path> <path d="M1407.31 152.212C1424.61 149.528 1434.14 118.404 1428.6 82.6933C1423.06 46.9831 1404.54 20.21 1387.24 22.894C1369.95 25.578 1360.41 56.7026 1365.96 92.4129C1371.5 128.123 1390.01 154.896 1407.31 152.212Z" fill="#009A46"></path> <path d="M1392.08 101.993C1392.9 62.2552 1377.96 29.7196 1358.7 29.323C1339.45 28.9265 1323.18 60.8192 1322.36 100.557C1321.54 140.296 1336.48 172.831 1355.74 173.228C1374.99 173.624 1391.26 141.732 1392.08 101.993Z" fill="#FF9B00"></path> <path d="M1354.95 122.266C1363.43 79.3639 1353.46 41.2571 1332.69 37.1519C1311.92 33.0468 1288.2 64.4978 1279.72 107.4C1271.24 150.302 1281.21 188.409 1301.98 192.514C1322.75 196.619 1346.47 165.168 1354.95 122.266Z" fill="#F5AFCB"></path> <path d="M1316.82 143.647C1334.2 98.7915 1330.67 55.6045 1308.95 47.1862C1287.22 38.7679 1255.51 68.3061 1238.13 113.162C1220.75 158.017 1224.27 201.204 1246 209.623C1267.73 218.041 1299.43 188.503 1316.82 143.647Z" fill="#2A3362"></path> <path d="M1283.87 159.945C1311.39 114.439 1315.83 66.7466 1293.79 53.4201C1271.74 40.0937 1231.57 66.1798 1204.05 111.685C1176.53 157.191 1172.09 204.883 1194.14 218.21C1216.18 231.536 1256.35 205.45 1283.87 159.945Z" fill="#FF5805"></path> <path d="M1233.64 191.905C1275.07 151.015 1292.59 101.604 1272.79 81.5424C1252.98 61.4803 1203.34 78.3642 1161.92 119.254C1120.49 160.143 1102.97 209.554 1122.77 229.616C1142.58 249.678 1192.22 232.794 1233.64 191.905Z" fill="#009A46"></path> <path d="M1193.06 212.865C1242.94 172.73 1267.63 120.615 1248.19 96.4625C1228.76 72.3096 1172.56 85.265 1122.68 125.399C1072.79 165.533 1048.1 217.648 1067.54 241.801C1086.97 265.954 1143.17 252.999 1193.06 212.865Z" fill="#FF9B00"></path> <path d="M1147.8 236.812C1209.5 202.866 1246.19 151.126 1229.75 121.246C1213.31 91.3666 1149.96 94.6626 1088.26 128.608C1026.55 162.554 989.863 214.294 1006.3 244.174C1022.75 274.054 1086.09 270.758 1147.8 236.812Z" fill="#F5AFCB"></path> <path d="M1100.08 260.589C1173.41 235.597 1223.05 186.552 1210.95 151.045C1198.85 115.537 1129.59 107.013 1056.25 132.005C982.912 156.997 933.272 206.041 945.375 241.549C957.478 277.056 1026.74 285.58 1100.08 260.589Z" fill="#2A3362"></path> <path d="M1049.75 283.752C1133.95 270.687 1197.09 227.032 1190.76 186.245C1184.43 145.458 1111.03 122.985 1026.83 136.05C942.618 149.114 879.485 192.77 885.815 233.557C892.144 274.343 965.539 296.817 1049.75 283.752Z" fill="#FF5805"></path> <path d="M1167.94 227.074C1168.88 181.682 1093.66 143.32 999.944 141.39C906.224 139.46 829.492 174.692 828.557 220.084C827.622 265.476 902.838 303.838 996.558 305.768C1090.28 307.698 1167.01 272.466 1167.94 227.074Z" fill="#009A46"></path> <path d="M1141.56 273.322C1151.24 224.33 1077.08 168.408 975.916 148.416C874.752 128.423 784.892 151.932 775.208 200.923C765.525 249.914 839.684 305.837 940.849 325.829C1042.01 345.821 1131.87 322.313 1141.56 273.322Z" fill="#FF9B00"></path> <path d="M1110.01 324.903C1129.86 273.689 1060.2 198.953 954.433 157.974C848.663 116.995 746.832 125.292 726.986 176.505C707.14 227.719 776.795 302.455 882.565 343.434C988.335 384.413 1090.17 376.116 1110.01 324.903Z" fill="#F5AFCB"></path> <path d="M1071.92 381.239C1103.21 329.542 1042.04 235.275 935.299 170.686C828.556 106.098 716.661 95.6469 685.374 147.343C654.087 199.04 715.256 293.307 821.999 357.896C928.742 422.484 1040.64 432.935 1071.92 381.239Z" fill="#2A3362"></path> <path d="M1025.81 441.469C1069.58 391.442 1021.32 277.635 918.017 187.274C814.715 96.9125 695.49 64.2149 651.722 114.241C607.953 164.268 656.215 278.075 759.517 368.436C862.819 458.798 982.043 491.495 1025.81 441.469Z" fill="#FF5805"></path> <path d="M970.286 504.417C1027.25 458.586 996.712 326.088 902.071 208.474C807.43 90.8607 684.527 32.6691 627.56 78.4999C570.593 124.331 601.134 256.829 695.775 374.442C790.416 492.056 913.319 550.247 970.286 504.417Z" fill="#009A46"></path> <path d="M903.991 568.458C974.459 529.689 966.688 380.323 886.633 234.839C806.578 89.3544 684.555 2.84385 614.087 41.612C543.619 80.3802 551.391 229.746 631.446 375.231C711.501 520.715 833.524 607.226 903.991 568.458Z" fill="#FF9B00"></path> <path d="M825.887 631.687C909.629 603.149 929.741 439.854 870.809 266.957C811.876 94.0596 696.216 -22.9667 612.474 5.57109C528.732 34.1089 508.62 197.404 567.552 370.301C626.484 543.198 742.145 660.225 825.887 631.687Z" fill="#F5AFCB"></path> <path d="M821.885 633.053C905.627 604.515 925.739 441.22 866.807 268.323C807.874 95.4256 692.214 -21.6008 608.472 6.93707C524.73 35.4749 504.618 198.77 563.55 371.667C622.482 544.565 738.143 661.591 821.885 633.053Z" fill="#F5AFCB"></path> <path d="M721.42 630.699C800.899 618.368 844.688 475.352 819.224 311.263C793.761 147.175 708.688 24.1517 629.209 36.4829C549.73 48.814 505.942 191.83 531.405 355.918C556.868 520.007 641.941 643.03 721.42 630.699Z" fill="#FF9B00"></path> <path d="M767.644 349.934C770.753 199.008 714.013 75.4388 640.911 73.9332C567.809 72.4277 506.028 193.556 502.919 344.482C499.81 495.407 556.55 618.976 629.652 620.482C702.754 621.988 764.535 500.859 767.644 349.934Z" fill="#009A46"></path> <path d="M708.544 381.631C734.622 247.138 702.952 127.872 637.807 115.243C572.662 102.614 498.711 201.405 472.633 335.898C446.555 470.391 478.226 589.657 543.371 602.286C608.516 614.915 682.466 516.125 708.544 381.631Z" fill="#FF5805"></path> <path d="M657.56 413.911C702.638 297.584 693.501 185.585 637.152 163.754C580.802 141.922 498.579 218.525 453.502 334.852C408.424 451.178 417.561 563.177 473.91 585.009C530.259 606.84 612.482 530.237 657.56 413.911Z" fill="#2A3362"></path> <path d="M600.765 439.444C659.492 342.407 669.004 240.692 622.009 212.257C575.015 183.821 489.311 239.433 430.584 336.47C371.857 433.507 362.345 535.222 409.34 563.657C456.334 592.093 542.038 536.48 600.765 439.444Z" fill="#F5AFCB"></path> <path d="M543.869 461.08C611.766 383.474 636.336 293.907 598.745 261.026C561.155 228.144 475.64 264.401 407.743 342.007C339.845 419.612 315.276 509.18 352.866 542.061C390.456 574.942 475.971 538.686 543.869 461.08Z" fill="#FF9B00"></path> <path d="M487.492 479.181C560.525 420.424 596.657 344.117 568.193 308.744C539.729 273.371 457.449 292.328 384.415 351.085C311.381 409.841 275.25 486.149 303.714 521.522C332.177 556.895 414.458 537.938 487.492 479.181Z" fill="#009A46"></path> <path d="M432.104 494.215C506.765 453.14 551.158 390.527 531.259 354.364C511.36 318.202 434.704 322.184 360.044 363.259C285.384 404.333 240.991 466.946 260.89 503.109C280.789 539.271 357.444 535.289 432.104 494.215Z" fill="#FF5805"></path> <path d="M378.11 506.62C451.447 481.628 501.087 432.583 488.984 397.076C476.881 361.568 407.619 353.044 334.282 378.036C260.945 403.028 211.305 452.072 223.408 487.579C235.511 523.087 304.773 531.611 378.11 506.62Z" fill="#2A3362"></path> <path d="M325.812 516.955C395.404 506.158 447.58 470.086 442.351 436.385C437.121 402.685 376.466 384.118 306.874 394.915C237.282 405.712 185.106 441.785 190.335 475.485C195.565 509.186 256.22 527.753 325.812 516.955Z" fill="#F5AFCB"></path> <path d="M392.221 471.898C392.86 440.905 341.482 414.711 277.467 413.392C213.451 412.074 161.039 436.13 160.401 467.124C159.762 498.118 211.139 524.312 275.155 525.63C339.17 526.949 391.583 502.892 392.221 471.898Z" fill="#FF9B00"></path> <path d="M341.134 496.087C344.57 468.107 300.52 439.674 242.744 432.581C184.969 425.488 135.347 442.42 131.911 470.401C128.475 498.381 172.526 526.814 230.302 533.907C288.077 541 337.699 524.068 341.134 496.087Z" fill="#009A46"></path> <path d="M285.922 531.283C295.182 507.386 262.688 472.516 213.344 453.399C164 434.281 116.492 438.155 107.232 462.052C97.9717 485.949 130.466 520.818 179.81 539.936C229.154 559.053 276.662 555.179 285.922 531.283Z" fill="#FF5805"></path> <path d="M231.235 555.348C243.3 535.414 219.713 499.064 178.553 474.159C137.392 449.253 94.2453 445.223 82.1809 465.158C70.1165 485.092 93.7034 521.442 134.864 546.347C176.024 571.253 219.171 575.282 231.235 555.348Z" fill="#2A3362"></path> <path d="M176.449 576.008C190.391 560.073 175.008 523.813 142.09 495.018C109.172 466.224 71.1848 455.8 57.2429 471.735C43.3011 487.67 58.6843 523.931 91.6022 552.725C124.52 581.519 162.507 591.944 176.449 576.008Z" fill="#F5AFCB"></path> <path d="M122.078 593.528C137.082 581.456 129.045 546.567 104.126 515.599C79.2075 484.632 46.8435 469.314 31.8391 481.385C16.8348 493.456 24.872 528.346 49.7907 559.313C74.7095 590.28 107.073 605.599 122.078 593.528Z" fill="#FF9B00"></path> <path d="M68.6523 608.379C83.9903 599.941 82.3006 567.434 64.8783 535.772C47.4561 504.111 20.8988 485.285 5.56084 493.723C-9.77709 502.161 -8.08744 534.668 9.33479 566.33C26.757 597.991 53.3144 616.818 68.6523 608.379Z" fill="#009A46"></path> <path d="M16.4351 620.966C31.4919 615.834 35.1043 586.462 24.5034 555.361C13.9026 524.26 -6.89708 503.208 -21.9539 508.339C-37.0108 513.47 -40.6231 542.842 -30.0223 573.943C-19.4215 605.044 1.37822 626.097 16.4351 620.966Z" fill="#FF5805"></path></g> <defs><clipPath id="clip0_3310_4825"><rect width="2093" height="639" fill="white" transform="translate(-284)"></rect></clipPath></defs></svg></figure>
+</section>
+
+
+
+<section class="product">
+  <div class="product-box">
+  <div class="product-text">
+    <h2 class="product-heading">
+    Ready to get started?
+    </h2>
+    <p class="product-infos">
+      Create an account and instantly start accepting payments, selling your beautiful products online and building financial tools.
+    </p>
+    <div class="product-button">
+      <button class="product-btn1">
+      Get Started
+      </button>
+      <div class="tests">
+        <a href="" class="test">
+          Contact Sales
+        </a>
+      </div>
+     
+    </div>
+    
+  </div>
+  </div>
+ </section>
+
+
+
+
+
+
+ <div class="accordion-space">
+  <div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <but class="accordion-button collapsed bg-light"  data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+       <h2 style="color: black; font-size: 20px;font-weight: 600;">Products</h2>
+        </button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body p-0">
+          <ul style="list-style: none;">
+            <li class="acc">Collect Payment</li>
+            <li class="acc">Send money</li>
+            <li class="acc">Store</li>
+            <li class="acc">Payment Links</li>
+            <li class="acc">Invoices</li>
+            <li class="acc">Capital </li>
+            <li class="acc">Grow</li>
+            <li class="acc">Card Issuing</li>
+            <li class="acc">FaaS</li>
+            <li class="acc">Disha</li>
+            <li class="acc">Send App</li>
+            <li class="acc">Tuition</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <but class="accordion-button collapsed bg-light" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        <h2 style="color: black; font-size: 20px;font-weight: 600;">Resources</h2>
+        </button>
+      </h2>
+      <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <ul style="list-style: none;">
+            <li class="acc">Pricing</li>
+            <li class="acc">Support</li>
+            <li class="acc">Blog</li>
+            <li class="acc">Integration</li>
+            <li class="acc">Why you go charged</li>
+            <li class="acc">Cookie setting</li>
+            <li class="acc">Payment protection promise</li>
+            <li class="acc">Dashborad Guide</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <but class="accordion-button collapsed bg-light"  data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+          <h2 style="color: black; font-size: 20px;font-weight: 600;">Developers</h2>
+        </button>
+      </h2>
+      <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <ul style="list-style: none;">
+            <li class="acc">API Documentation</li>
+            <li class="acc">API Reference</li>
+            <li class="acc">API Status</li>
+</ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <but class="accordion-button collapsed bg-light"  data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+          <h2 style="color: black; font-size: 20px;font-weight: 600;">Company</h2>
+        </button>
+      </h2>
+      <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <ul style="list-style: none;">
+            <li class="acc">Customers</li>
+            <li class="acc">Careeer</li>
+            <li class="acc">Press</li>
+            <li class="acc">Covid 19</li>
+</ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <but class="accordion-button collapsed bg-light"  data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+          <h2 style="color: black; font-size: 20px;font-weight: 600;">Contact</h2>
+        </button>
+      </h2>
+      <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <ul style="list-style: none;">
+            <li class="acc">hi@flutterwavego.com</li>
+            <li class="acc">+234 201-8889595</li>
+            <li class="acc">0700-FLUTTERWAVE            </li>
+            <li class="acc">X Support</li>
+            <li class="acc">Our call lines are available 24/7.</li>
+</ul>
+        </div>
+      </div>
+    </div>
+
+   
+
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <but class="accordion-button collapsed bg-light"  data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+              <h2 style="color: black; font-size: 20px;font-weight: 600;">Connect</h2>
+            </button>
+          </h2>
+          <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <ul style="list-style: none;">
+                <li class="acc">X (formerly Twitter)</li>
+                <li class="acc">Facebook</li>
+                <li class="acc">Instagram</li>
+                <li class="acc">YouTube</li>
+                <li class="acc">Linkedin</li>             
+    </ul>
+            </div>
+          </div>
+        </div>
+        </div>
+
+
+
+        
+  
+
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <but class="accordion-button collapsed bg-light"  data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+        <h2 style="color: black; font-size: 20px;font-weight: 600;">Legal</h2>
+      </button>
+    </h2>
+    <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <ul style="list-style: none;">
+          <li class="acc">Privacy notice</li>
+          <li class="acc">Terms of use</li>
+          <li class="acc">Cookie notice</li>
+          <li class="acc">Merchant service agreement</li>
+          <li class="acc">IMS policy</li>
+          <li class="acc">Send App licences</li>
+</ul>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="footer-section">
+  <div class="footer-group">
+    <div class="footer-body">
+<h6 class="footer-heading">Products</h6>
+<nav class="footer-nav">
+<a href="" class="footer-navs">Career</a>
+<a href="" class="footer-navs">Send Money</a>
+<a href="" class="footer-navs">Store</a>
+<a href="" class="footer-navs">Payment Links </a>
+<a href="" class="footer-navs">Invoices </a>
+<a href="" class="footer-navs">Capital</a>
+<a href="" class="footer-navs">Grow </a>
+<a href="" class="footer-navs">Card Issuing </a>
+<a href="" class="footer-navs">FaaS</a>
+<a href="" class="footer-navs">Disha</a>
+<a href="" class="footer-navs">Send App</a>
+<a href="" class="footer-navs">Tuition</a>
+</nav>
+    </div>
+    <div class="footer-body">
+      <h6 class="footer-heading">Resources</h6>
+      <nav class="footer-nav">
+        <a href="" class="footer-navs">Pricing</a>
+        <a href="" class="footer-navs">Support</a>
+        <a href="" class="footer-navs">Blog</a>
+        <a href="" class="footer-navs">Integrations </a>
+        <a href="" class="footer-navs">Why You Got charged</a>
+        <a href="" class="footer-navs">Cookies setting</a>
+        <a href="" class="footer-navs">Grow </a>
+        <a href="" class="footer-navs">Payment protection promise</a>
+        <a href="" class="footer-navs">Dashboard Guide</a>
+      </nav>
+    </div>
+    <div class="footer-body">
+      <h6 class="footer-heading">Developers</h6>
+      <nav class="footer-nav">
+        <a href="" class="footer-navs">API Documentation</a>
+        <a href="" class="footer-navs">API Reference</a>
+        <a href="" class="footer-navs">API Status</a>
+      </nav>
+    </div>
+    <div class="footer-body">
+      <h6 class="footer-heading">Companies</h6>
+      <nav class="footer-nav">
+        <a href="" class="footer-navs">Customers</a>
+        <a href="" class="footer-navs">Careers</a>
+        <a href="" class="footer-navs">Press</a>
+        <a href="" class="footer-navs">Covid 19</a>
+      </nav>
+    </div>
+    <div class="footer-body">
+      <h6 class="footer-heading">Contact</h6>
+      <nav class="footer-nav">
+        <a href="" class="footer-navs">hi@flutterwavego.com</a>
+        <a href="" class="footer-navs">+234 201-8889595</a>
+        <a href="" class="footer-navs">0700-FLUTTERWAVE</a>
+        <a href="" class="footer-navs">X Support</a>
+      </nav>
+    </div>
+  </div>
+
+
+
+  
+
+
+
+<hr id="foot">
+<div class="nation-side">
+  <div class="country"> 
+      <div class="na">
+      <div class="ops"></div> <p> Nigeria  </p> <i class="fa-solid fa-chevron-down"></i></div>
+      <div class="hides">
+      <div class="nations">
+          <div class="i"> <img src="../images/cam.svg" height="50px" width="50px" alt="">Cameroon</div>
+          <div class="i"> <img src="../images/ivoery.svg" height="50px" width="50px" alt="">Ivory </div>
+          <div class="i"> <img src="../images/eg.svg" height="50px" width="50px" alt="">Egypt</div>
+          <div class="i"> <img src="../images/eg.svg"  hheight="50px" width="50px" alt="">Egypt</div>
+          <div class="i"> <img src="../images/rast of.svg" height="50px" width="50px" alt=""> Rest of Europe</div>
+          <div class="i"> <img src="../images/uk.svg" height="50px" width="50px" alt="">United Kingdom</div>
+          <div class="i"> <img src="../images/ghana.svg"  height="50px" width="50px"  alt="">Ghana</div>
+          <div class="i"> <img src="../images/ken.svg" height="50px" width="50px" alt="">Kenya</div>
+          <div class="i"> <img src="../images/mauritus.svg" height="50px" width="50px" alt="">Mauritius</div>
+          <div class="i"> <img src="../images/malaw.svg" height="50px" width="50px" alt="">Malawi</div>
+          <div class="i"> <img src="../images/ng.svg" height="50px" width="50px" alt="">Nigeria</div>
+          <div class="i"> <img src="../images/rw.svg" height="50px" width="50px" alt="">Rwanda</div>
+          <div class="i"> <img src="../images/sn.svg" height="50px" width="50px" alt="">Senegal</div>
+          <div class="i"> <img src="../images/tanz.svg" height="50px" width="50px" alt="">Tanzania`</div>
+          <div class="i"> <img src="../images/uganda.svg" height="50px" width="50px" alt=""> Uganda</div>
+          <div class="i"> <img src="../images/south af.svg" height="50px" width="50px" alt=""> South Africa</div>
+          <div class="i"> <img src="../images/us.svg" height="50px" width="50px" alt="">United States</div>
+      </div></div>
+  </div>
+
+<div class="country-side">
+  <a href="">X (formerly Twitter)</a>
+  <a href="">Facebook</a>
+  <a href="">Instagram</a>
+  <a href="">YouTube</a>
+  <a href="">LinkedIn</a>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr id="foo">
+<div class="footer-last">
+  <a href="">Privacy notice </a>
+  <a href="">Terms of use</a>
+  <a href="">Cookie notice</a>
+  <a href="">Merchant service agreement</a>
+  <a href="">IMS policy</a>
+  <a href="">Send App licenses</a>
+</div>
+
+<div class="footer-la">
+  <p>© Flutterwave Technology Solutions Limited is Registered with Central Bank of Nigeria</p>
+</div>  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
